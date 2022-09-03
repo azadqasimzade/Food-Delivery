@@ -48,3 +48,8 @@ section {
   border-radius: 5px;
   color: #df2020 !important;
 }
+
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 500ms;
+  --animate-delay: 0.9s;
+}

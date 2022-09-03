@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import logo from "../../assets/images/res-logo.png";
 import { NavLink, Link } from "react-router-dom";
 import { RiShoppingBasketLine, RiUser3Line, RiMenuLine } from "react-icons/ri";
+import { cartUiActions } from "../../Store/cartUiSlice";
+import "animate.css";
 
 const nav_links = [
   {
@@ -24,13 +27,39 @@ const nav_links = [
 
 function Header() {
   const [show, setShow] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const toggleCart = () => {
+    dispatch(cartUiActions.toggle());
+  };
+
+  const { totalQuantity } = useSelector((state) => state.cart);
+
+  const transitionShow = () => {
+    if (window.scrollY > 100) {
+      setShowHeader(true);
+    } else {
+      setShowHeader(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", transitionShow);
+    return () => window.removeEventListener("scroll", transitionShow);
+  }, [showHeader]);
 
   const toggleMenu = () => {
     setShow(!show);
   };
 
   return (
-    <header className="md:w-full md:h-20 w-full h-12">
+    <header
+      className={`${
+        showHeader && "animate__fadeInDown"
+      } animate__animated fixed z-50 top-0 md:w-full w-full lg:py-3 py-1.5 bg-white shadow-md`}
+    >
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="text-center  flex flex-col items-center">
@@ -66,10 +95,13 @@ function Header() {
             </div>
           </div>
           <div className="flex items-center gap-4 relative">
-            <span className="flex items-center lg:text-[1.3rem] text-base text-hColor cursor-pointer">
+            <span
+              onClick={toggleCart}
+              className="flex items-center lg:text-[1.3rem] text-base text-hColor cursor-pointer"
+            >
               <RiShoppingBasketLine />
-              <span className="absolute -top-2.5 left-3 text-white w-[0.938rem] h-[0.938rem] rounded-full bg-bgRed text-[.8rem] font-normal flex items-center justify-center">
-                2
+              <span className="absolute -top-3 left-3.5 text-white w-[0.938rem] h-[0.938rem] p-2 rounded-full bg-bgRed text-[.8rem] font-normal flex items-center justify-center">
+                {totalQuantity}
               </span>
             </span>
             <span className=" lg:text-[1.3rem] text-base text-hColor cursor-pointer">
