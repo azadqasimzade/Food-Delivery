@@ -46,7 +46,7 @@ function CartItem({ item }) {
               <span onClick={incrementItem} className="cursor-pointer ">
                 <FiPlus />
               </span>
-              <span>{quantity}</span>
+              <span className="md:text-base text-[0.9rem]">{quantity}</span>
               <span onClick={decrementItem} className="cursor-pointer ">
                 <AiOutlineLine />
               </span>

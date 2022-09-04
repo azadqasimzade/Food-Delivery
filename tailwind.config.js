@@ -4,16 +4,19 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        bgColor: '#fcfcfc',
-        bgRed: '#df2020',
-        footerBg: '#fde4e4'
+        bgColor: "#fcfcfc",
+        bgRed: "#df2020",
+        footerBg: "#fde4e4",
       },
       colors: {
-        hColor: '#212245',
-        hHover: '#df2020',
-        footerBg: '#fde4e4'
-      }
+        hColor: "#212245",
+        hHover: "#df2020",
+        footerBg: "#fde4e4",
+      },
+      backgroundImage: {
+        "common-img": "url(/src/assets/images/banner-02.jpg)",
+      },
     },
   },
   plugins: [],
-}
+};

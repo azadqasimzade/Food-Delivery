@@ -71,7 +71,7 @@ function Footer() {
             <p className="md:text-base text-[0.8rem]">
               Subscribe our newsletter
             </p>
-            <div className="flex items-center p-2 border border-hColor rounded-md justify-between">
+            <div className="flex items-center p-2 border border-hColor rounded-md justify-between mt-2">
               <input
                 type="email"
                 className="w-full md:text-base text-[0.9rem] bg-transparent border-none pr-3 outline-none placeholder:text-hColor"

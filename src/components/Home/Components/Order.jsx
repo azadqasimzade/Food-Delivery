@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Order() {
   return (
-    <section className="md:mt-28">
+    <section>
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 grid-cols-1">
           <div className="pt-[4.375rem] md:text-start text-center">

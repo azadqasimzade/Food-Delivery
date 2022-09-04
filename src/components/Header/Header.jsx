@@ -4,7 +4,6 @@ import logo from "../../assets/images/res-logo.png";
 import { NavLink, Link } from "react-router-dom";
 import { RiShoppingBasketLine, RiUser3Line, RiMenuLine } from "react-icons/ri";
 import { cartUiActions } from "../../Store/cartUiSlice";
-import "animate.css";
 
 const nav_links = [
   {
@@ -57,17 +56,19 @@ function Header() {
   return (
     <header
       className={`${
-        showHeader && "animate__fadeInDown"
-      } animate__animated fixed z-50 top-0 md:w-full w-full lg:py-3 py-1.5 bg-white shadow-md`}
+        showHeader && "fixed"
+      } static z-50 top-0 md:w-full w-full lg:py-3 py-1.5 bg-white shadow-md`}
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="text-center  flex flex-col items-center">
-            <img
-              src={logo}
-              className="md:w-16 w-12 object-contain"
-              alt="logo"
-            />
+            <Link to={'/'}>
+              <img
+                src={logo}
+                className="md:w-16 w-12 object-contain"
+                alt="logo"
+              />
+            </Link>
             <h5 className="font-semibold lg:text-base text-[0.8rem] text-hColor">
               Tasty Treat
             </h5>
@@ -75,9 +76,9 @@ function Header() {
           <div
             className={`${
               show ? "block" : "hidden"
-            } lg:block lg:static lg:top-auto lg:left-auto lg:w-auto lg:h-auto lg:bg-transparent fixed top-0 left-0 w-full h-full bg-black/50 z-20`}
+            } lg:block lg:static lg:top-auto lg:left-auto lg:w-auto lg:h-auto lg:bg-transparent fixed top-0 left-0 w-full h-full bg-black/50 z-50`}
           >
-            <div className="lg:relative lg:top-auto lg:right-auto lg:w-auto lg:h-auto lg:bg-transparent lg:flex-row lg:justify-start lg:gap-5 flex items-center absolute top-0 right-0 w-64 h-full bg-white flex-col justify-center gap-10 z-30">
+            <div className="lg:relative lg:top-auto lg:right-auto lg:w-auto lg:h-auto lg:bg-transparent lg:flex-row lg:justify-start lg:gap-5 flex items-center absolute top-0 right-0 w-64 h-full bg-white flex-col justify-center gap-10 z-50">
               {nav_links.map((item, index) => (
                 <NavLink
                   onClick={toggleMenu}

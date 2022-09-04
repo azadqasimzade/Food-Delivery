@@ -20,7 +20,7 @@ function ProductCard({ item }) {
   };
 
   return (
-    <div className="border border-footerBg flex flex-col items-center p-8 cursor-pointer shadow-md hover:shadow-none rounded-md transition duration-300 text-center group">
+    <div className="border border-footerBg flex flex-col items-center xl:p-8 p-4 cursor-pointer shadow-md hover:shadow-none rounded-md transition duration-300 text-center group">
       <div className="w-1/2 mb-5">
         <img
           src={image01}
@@ -29,7 +29,7 @@ function ProductCard({ item }) {
         />
       </div>
       <div className="w-full">
-        <h5 className="text-hColor mb-7 md:text-base text-[0.9rem]">
+        <h5 className="text-hColor mb-7 md:text-base text-[0.9rem] whitespace-nowrap">
           <Link to={`/foods/${id}`}>{title}</Link>
         </h5>
         <div className="w-full flex items-center justify-between">
