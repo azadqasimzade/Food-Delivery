@@ -51,7 +51,7 @@ function PopularFoods() {
           <div className="bg-bgRed text-center mt-8 py-5 px-0 rounded-lg flex items-center justify-center md:gap-x-6 gap-x-1">
             <button
               onClick={() => setCategory("ALL")}
-              className={`md:py-2 md:px-5 py-1 px-3 text-white md:text-base text-[0.8rem] flex items-center gap-x-3 ${
+              className={`md:py-2 md:px-5 py-1 px-3 text-white md:text-base text-[0.8rem] hover:bg-white hover:text-hHover rounded transition duration-300 flex items-center gap-x-3 ${
                 category === "ALL" ? "foodBtnActive" : ""
               }`}
             >
@@ -59,7 +59,7 @@ function PopularFoods() {
             </button>
             <button
               onClick={() => setCategory("BURGER")}
-              className={`md:py-2 md:px-5 py-1 px-3 text-white md:text-base text-[0.8rem] flex items-center gap-x-3 ${
+              className={`md:py-2 md:px-5 py-1 px-3 text-white md:text-base text-[0.8rem] hover:bg-white hover:text-hHover rounded transition duration-300 flex items-center gap-x-3 ${
                 category === "BURGER" ? "foodBtnActive" : ""
               }`}
             >
@@ -68,7 +68,7 @@ function PopularFoods() {
             </button>
             <button
               onClick={() => setCategory("PIZZA")}
-              className={`md:py-2 md:px-5 py-1 px-3 text-white md:text-base text-[0.8rem] flex items-center gap-x-3 ${
+              className={`md:py-2 md:px-5 py-1 px-3 text-white md:text-base text-[0.8rem] hover:bg-white hover:text-hHover rounded transition duration-300 flex items-center gap-x-3 ${
                 category === "PIZZA" ? "foodBtnActive" : ""
               }`}
             >
@@ -77,7 +77,7 @@ function PopularFoods() {
             </button>
             <button
               onClick={() => setCategory("BREAD")}
-              className={`md:py-2 md:px-5 py-1 px-3 text-white md:text-base text-[0.8rem] flex items-center gap-x-3 ${
+              className={`md:py-2 md:px-5 py-1 px-3 text-white md:text-base text-[0.8rem] hover:bg-white hover:text-hHover rounded transition duration-300 flex items-center gap-x-3 ${
                 category === "BREAD" ? "foodBtnActive" : ""
               }`}
             >

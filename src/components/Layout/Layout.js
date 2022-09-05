@@ -6,13 +6,11 @@ import Routes from "../../routes/Routers";
 import Carts from "../UI/Cart/Carts";
 
 function Layout() {
-  const showCart = useSelector(state => state.cartUi.cartIsVisible)
+  const showCart = useSelector((state) => state.cartUi.cartIsVisible);
   return (
     <div>
       <Header />
-      {
-        showCart && <Carts/>
-      }
+      {showCart && <Carts />}
       <div>
         <Routes />
       </div>

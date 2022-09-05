@@ -31,7 +31,9 @@ function Carts() {
         </div>
         <div ref={animationParent}>
           {cartProoducts.length === 0 ? (
-            <h6 className="md:text-base text-[0.8rem] text-center mt-5">No item added to the cart</h6>
+            <h6 className="md:text-base text-[0.8rem] text-center mt-5">
+              No item added to the cart
+            </h6>
           ) : (
             cartProoducts.map((item) => <CartItem key={item.id} item={item} />)
           )}
@@ -40,7 +42,9 @@ function Carts() {
           <div className="sticky w-full bottom-0 left-0 h-20 flex items-center gap-x-2 justify-between mt-3 px-3 bg-bgRed text-white">
             <h6 className="md:text-base text-[0.9rem]">
               Subtotal amount:{" "}
-              <span className="md:text-xl text-base font-semibold">${totalAmount}</span>
+              <span className="md:text-xl text-base font-semibold">
+                ${totalAmount}
+              </span>
             </h6>
             <button className="md:text-base text-[0.8rem] px-5 py-1 rounded bg-white text-hColor font-semibold">
               <Link to={"/checkout"}>Checkout</Link>

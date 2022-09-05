@@ -29,7 +29,7 @@ function ProductCard({ item }) {
         />
       </div>
       <div className="w-full">
-        <h5 className="text-hColor mb-7 md:text-base text-[0.9rem] whitespace-nowrap">
+        <h5 className="text-hColor hover:text-hHover transition duration-300 mb-7 md:text-base text-[0.9rem] whitespace-nowrap">
           <Link to={`/foods/${id}`}>{title}</Link>
         </h5>
         <div className="w-full flex items-center justify-between">
@@ -38,7 +38,7 @@ function ProductCard({ item }) {
           </span>
           <button
             onClick={addToCart}
-            className="md:px-6 md:py-2 px-3 py-1 bg-bgRed text-white rounded-md md:text-[0.9rem] text-[0.8rem]"
+            className="md:px-6 md:py-2 px-3 py-1 bg-bgRed hover:bg-hColor transition duration-300 text-white rounded-md md:text-[0.9rem] text-[0.8rem]"
           >
             Add to Cart
           </button>

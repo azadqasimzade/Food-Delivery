@@ -77,7 +77,7 @@ function Footer() {
                 className="w-full md:text-base text-[0.9rem] bg-transparent border-none pr-3 outline-none placeholder:text-hColor"
                 placeholder="Enter your email"
               />
-              <span className="flex items-center justify-center cursor-pointer bg-hColor rounded-md text-white md:py-3 md:px-6 py-1.5 px-3">
+              <span className="flex items-center justify-center cursor-pointer bg-hColor hover:bg-hHover transition duration-300 rounded-md text-white md:py-3 md:px-6 py-1.5 px-3">
                 <RiSendPlaneLine />
               </span>
             </div>

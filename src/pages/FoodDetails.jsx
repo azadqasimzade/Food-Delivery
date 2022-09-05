@@ -42,12 +42,13 @@ function FoodDetails() {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   }, [product]);
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    console.log(enteredName, enteredEmail, reviewMsg);
   };
 
   return (
@@ -96,7 +97,7 @@ function FoodDetails() {
                 </p>
                 <button
                   onClick={addItem}
-                  className="md:px-6 md:py-2 px-3 py-1 bg-bgRed text-white rounded-md md:text-[0.9rem] text-[0.8rem]"
+                  className="md:px-6 md:py-2 px-3 py-1 bg-bgRed text-white hover:bg-hColor transition duration-300 rounded-md md:text-[0.9rem] text-[0.8rem]"
                 >
                   Add to Cart
                 </button>
@@ -165,10 +166,10 @@ function FoodDetails() {
                 </div>
                 <form
                   onSubmit={submitHandler}
-                  className="md:w-3/5 w-full m-auto bg-footerBg p-5 rounded"
+                  className="md:w-3/5 grid gap-y-6 w-full m-auto bg-footerBg p-5 rounded"
                   noValidate
                 >
-                  <div className="mb-7">
+                  <div>
                     <input
                       value={enteredName}
                       onChange={(e) => setEnteredName(e.target.value)}
@@ -178,7 +179,7 @@ function FoodDetails() {
                       placeholder="Enter your name"
                     />
                   </div>
-                  <div className="mb-7">
+                  <div>
                     <input
                       value={enteredEmail}
                       onChange={(e) => setEnteredEmail(e.target.value)}
@@ -188,7 +189,7 @@ function FoodDetails() {
                       placeholder="Enter your email"
                     />
                   </div>
-                  <div className="mb-7">
+                  <div>
                     <textarea
                       value={reviewMsg}
                       onChange={(e) => setReviewMsg(e.target.value)}

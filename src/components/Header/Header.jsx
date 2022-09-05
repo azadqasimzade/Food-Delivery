@@ -56,13 +56,13 @@ function Header() {
   return (
     <header
       className={`${
-        showHeader && "fixed"
-      } static z-50 top-0 md:w-full w-full lg:py-3 py-1.5 bg-white shadow-md`}
+        showHeader && "sticky"
+      } z-50 top-0 md:w-full w-full lg:py-3 py-1.5 bg-white shadow-md`}
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="text-center  flex flex-col items-center">
-            <Link to={'/'}>
+            <Link to={"/"}>
               <img
                 src={logo}
                 className="md:w-16 w-12 object-contain"

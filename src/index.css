@@ -59,7 +59,7 @@ section {
   margin: auto;
 }
 
-.pagination li a{
+.pagination li a {
   padding: 5px 13px;
   background: #df2020;
   color: #fff !important;
@@ -69,14 +69,20 @@ section {
   justify-content: center;
 }
 
-.paginationActive{
+.paginationActive {
   background-color: #212245 !important;
 }
 
-.paginationDisabled{
+.paginationDisabled {
   opacity: 50%;
 }
 
-.tab_active{
+.tab_active {
   color: #df2020;
+}
+
+@media only screen and (max-width: 992px) {
+  .pagination li a {
+    padding: 3px 10px;
+  }
 }
